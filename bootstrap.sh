@@ -12,6 +12,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 brew update
 brew upgrade
 brew install git
+brew tap homebrew/cask-fonts && brew install --cask font-hack-nerd-font
 brew install --cask iterm2
 brew install zsh-completions
 brew install zsh-syntax-highlighting
