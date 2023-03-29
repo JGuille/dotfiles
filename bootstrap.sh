@@ -19,10 +19,9 @@ brew install zsh-syntax-highlighting
 cd $HOME
 sudo mv .zshrc .old-zshrc
 git clone https://github.com/JGuille/dotfiles.git
-sudo mv $HOME/dotfiles/.zshrc $HOME/
-sudo mv $HOME/dotfiles/.zsh $HOME/.zsh
-sudo mv $HOME/dotfiles/.config $HOME/.config
-source .zshrc
+cd dotfiles
+sudo cp -r . $HOME/
+cd $HOME && source .zshrc
 
 echo "Install Homebrew Packages"
 brew install autojump
@@ -109,3 +108,4 @@ brew install --cask docker
 brew install docker-compose
 sudo curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
 sudo installer -pkg AWSCLIV2.pkg -target
+brew install --cask warp
