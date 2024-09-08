@@ -7,6 +7,7 @@ plugins=(
   macos
   terraform
 )
+
 unsetopt nomatch
 setopt shwordsplit
 source $ZSH/oh-my-zsh.sh
@@ -19,3 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(starship init zsh)"
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+
+# Load Direnv
+eval "$(direnv hook zsh)"

@@ -44,15 +44,15 @@ format = "on [$hostname](bold yellow) "
 disabled = false
 
 [directory]
-truncation_length = 1
-truncation_symbol = "…/"
-home_symbol = " ~"
+#truncation_length = 1
+#truncation_symbol = "…/"
+home_symbol = "󰋜 ~"
 read_only_style = "197"
 read_only = "  "
 format = "at [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-symbol = " "
+symbol = " "
 format = "via [$symbol$branch]($style) "
 # truncation_length = 4
 truncation_symbol = "…/"
@@ -75,7 +75,7 @@ deleted = " "
 
 [kubernetes]
 format = 'via [ﴱ $context\($namespace\)](bold purple) '
-disabled = false
+disabled = true
 
 # (deactivated because of no space left)
 #
@@ -109,4 +109,9 @@ format = "via [ $version]($style) "
 disabled = true
 
 [aws]
-disabled= true%
+disabled= true
+
+[gcloud]
+disabled= true
+[line_break]
+disabled = false
